@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration packages="com.microsoft.applicationinsights.log4j.v2">
+  <!-- 日志文件目录和压缩文件目录配置 -->
+ 
+  <Appenders>
+    <!-- 输出控制台日志的配置 -->
+    <Console name="console" target="SYSTEM_OUT">    
+    	<ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+     	<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+ 	<ApplicationInsightsAppender name="aiAppender" />
+  </Appenders>
+  <Loggers>
+    <Root level="trace">
+     <AppenderRef ref="aiAppender"/>
+    </Root>
+  </Loggers>	
+</Configuration>
