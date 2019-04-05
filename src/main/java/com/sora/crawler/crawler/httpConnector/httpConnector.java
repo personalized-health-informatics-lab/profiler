@@ -21,7 +21,7 @@ public class httpConnector {
 //			System.out.println("Connecting to the pubmed");
 			logHelper.info("Connecting to the pubmed");
 			TimeUnit.MICROSECONDS.sleep(100);
-			urlStr = urlStr+"&api_key=08973ae361131affbaa80c01faa237c29a09";
+			urlStr = urlStr+"&api_key=YOURKEY";
             URL url = new URL(urlStr);  
             HttpURLConnection httpUrlConn = (HttpURLConnection) url.openConnection();  
             httpUrlConn.setDoInput(true);  
